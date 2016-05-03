@@ -20,6 +20,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="tiD-Il-WKy">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="KvA-iu-s5a" customClass="MonsterImage" customModule="MyMonster" customModuleProvider="target">
+                                <rect key="frame" x="167" y="341" width="266" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="7EM-7i-Tyw"/>
+                                    <constraint firstAttribute="width" constant="266" id="MZx-we-cf7"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="eKE-cs-sRD">
                                 <rect key="frame" x="0.0" y="549" width="600" height="51"/>
                                 <constraints>
@@ -62,14 +69,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="3SH-vl-f67">
                                 <rect key="frame" x="167" y="132" width="266" height="73"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="ZY8-Sq-nzE">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="ZY8-Sq-nzE" customClass="DragImg" customModule="MyMonster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="73" id="CWj-x9-IH7"/>
                                             <constraint firstAttribute="width" constant="73" id="OiC-Ki-PKk"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="7Q1-fY-bga">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="7Q1-fY-bga" customClass="DragImg" customModule="MyMonster" customModuleProvider="target">
                                         <rect key="frame" x="193" y="0.0" width="73" height="73"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="73" id="Chk-pt-WEo"/>
@@ -78,13 +85,6 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="KvA-iu-s5a">
-                                <rect key="frame" x="167" y="341" width="266" height="218"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="218" id="7EM-7i-Tyw"/>
-                                    <constraint firstAttribute="width" constant="266" id="MZx-we-cf7"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -105,6 +105,14 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eKE-cs-sRD" secondAttribute="bottom" id="zS5-4N-lPv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="foodImg" destination="7Q1-fY-bga" id="trM-F5-Yra"/>
+                        <outlet property="loveImg" destination="ZY8-Sq-nzE" id="wqb-hR-C4O"/>
+                        <outlet property="monsterImg" destination="KvA-iu-s5a" id="2Dy-lp-A9Z"/>
+                        <outlet property="penlty1" destination="jro-DC-Rew" id="0FE-5f-Tjy"/>
+                        <outlet property="penlty2" destination="3vd-B2-FAX" id="2In-iK-cxU"/>
+                        <outlet property="penlty3" destination="Hs6-ne-d0I" id="sl1-9A-AGW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
