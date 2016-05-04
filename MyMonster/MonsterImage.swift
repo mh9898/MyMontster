@@ -55,7 +55,7 @@ class MonsterImage : UIImageView {
         }
         
         self.animationImages = imgArray
-        self.animationDuration = 0.8
+        self.animationDuration = 1.5
         self.animationRepeatCount = 1
         self.startAnimating()
         
